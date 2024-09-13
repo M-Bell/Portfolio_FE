@@ -1,0 +1,118 @@
+/* Container for the content */
+.content {
+  max-width: 800px; /* Limit the width of the content */
+  margin: 40px auto; /* Center the content horizontally */
+  padding: 20px; /* Padding around the content */
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Styling for the back link */
+.content a {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Blue color for the link */
+  font-weight: lighter; /* Make the link bold */
+  margin-bottom: 10px; /* Space below the link */
+  display: inline-block; /* Display it as a block-level element */
+}
+
+.content a:hover {
+  font-weight: bold;
+}
+
+.data-container {
+  display: flex;
+}
+
+.description {
+  padding-right: 10px;
+}
+
+.image-block {
+  min-width: 30%;
+  max-width: 70%;
+  display: flex;
+  justify-content: center;
+}
+/* Styling for the project image */
+.project-image {
+  max-width: 100%; /* Ensure it doesn't exceed container width */
+  border-radius: 8px; /* Rounded corners for the image */
+  max-height: 60vh;
+}
+
+/* Styling for the project title */
+h2 {
+  font-size: 2rem; /* Large font size for the project title */
+  color: #333; /* Dark color for the title */
+  margin-bottom: 5px; /* Space below the title */
+}
+
+/* Styling for the project description */
+p {
+  font-size: 1rem; /* Normal font size for the description */
+  color: #666; /* Medium grey color for text */
+  line-height: 1.6; /* Improved readability with line height */
+  margin-bottom: 20px; /* Space below the description */
+}
+
+/* Section for Technology Stack */
+h4 {
+  font-size: 1.25rem; /* Slightly larger font for section headings */
+  color: #333; /* Dark color for section headings */
+  margin-bottom: 5px; /* Space below the heading */
+}
+
+/* List styling for the technology stack */
+ul {
+  list-style: none; /* Remove bullets from list */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Display list items in a row */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  gap: 10px; /* Space between the items */
+}
+
+/* Media URLs styling */
+.media-list li {
+  margin-bottom: 10px; /* Space between the links */
+}
+
+.media-list a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.media-list a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+.tech-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+}
+
+section {
+  margin-bottom: 10px;
+}
+
+.git-link {
+  margin-top: 3vh;
+  text-align: center;
+}
+
+.git-link a {
+  text-decoration: underline;
+}

@@ -1,0 +1,10 @@
+<a [routerLink]="'./' + project.id">
+  <div class="project-card-container">
+    <span class="project-name">{{ project.name }}</span>
+    <div class="tags">
+      @for(technology of project.technologyStack; track $index){
+      <app-technology-tag [name]="technology" />
+      }
+    </div>
+  </div>
+</a>

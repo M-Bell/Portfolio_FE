@@ -1,0 +1,51 @@
+/* Style for the project card container */
+.project-card-container {
+  display: block; /* Ensure the card is a block-level element */
+  background-color: #fff; /* White background for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for lift effect */
+  padding: 20px; /* Padding inside the card */
+  margin: 10px 0; /* Space around the card */
+  text-decoration: none; /* Remove default link styling */
+  color: #333; /* Default text color */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Hover effect for the project card */
+.project-card-container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.tags {
+  overflow-y: auto;
+  height: 10vh;
+  margin-top: 5px;
+}
+
+.tags::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+.tags::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Background color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the scrollbar track */
+}
+
+.tags::-webkit-scrollbar-thumb {
+  background-color: #004080; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+  border: 2px solid #f0f0f0; /* Add some padding between the thumb and track */
+}
+
+.tags::-webkit-scrollbar-thumb:hover {
+  background-color: #004080; /* Darker blue on hover */
+}
+
+.project-name {
+  width: 100%;
+  overflow: hidden; /* Hide the overflowing part of the text */
+  text-overflow: ellipsis; /* Display ellipsis when the text overflows */
+  white-space: nowrap; /* Prevent the text from wrapping onto the next line */
+  display: inline-block; /* Ensure it behaves as an inline block */
+}

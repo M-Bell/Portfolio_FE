@@ -1,0 +1,71 @@
+<div class="content">
+  <a routerLink="../">← Back</a>
+  <div>
+    @if(project){
+
+    <!-- Project Name -->
+    <h2>{{ project.name }}</h2>
+
+    <!-- Project Description (optional) -->
+    @if(project.description){
+    <section class="data-container">
+      <p class="description">{{ project.description }}</p>
+      @if(project.imageSrc){
+      <div class="image-block">
+        <img
+          [src]="project.imageSrc"
+          alt="{{ project.name }}"
+          class="project-image"
+        />
+      </div>
+      }
+    </section>
+    }
+
+    <span hidden></span>
+
+    @if(project.technologyStack && project.technologyStack.length > 0){
+    <!-- Technology Stack (optional) -->
+    <section class="tech-container">
+      <div class="tech-stack">
+        <h4>Technology Stack:</h4>
+        <ul>
+          @for(tech of project.technologyStack; track $index){
+          <app-technology-tag [name]="tech" />
+          }
+        </ul>
+      </div>
+    </section>
+
+    }
+
+    <span hidden></span>
+
+    @if(project.gitUrl){
+    <section class="git-link">
+      <h4>
+        <a href="{{ project.gitUrl }}" target="_blank"
+          >Click to access GitHub repo</a
+        >
+      </h4>
+    </section>
+    }
+
+    <span hidden></span>
+    @if(project.mediaId && project.mediaId.length > 0){
+    <!-- Media URLs (optional) -->
+    <section>
+      <h4>Media Id:</h4>
+      <ul>
+        @for(id of project.mediaId; track $index){
+        <li>
+          <p>{{ id }}</p>
+        </li>
+        }
+      </ul>
+    </section>
+    } } @else {
+    <p>Project missing</p>
+    }
+  </div>
+</div>

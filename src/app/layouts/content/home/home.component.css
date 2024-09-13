@@ -1,0 +1,107 @@
+/* Content Wrapper */
+.content {
+  padding: 0px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative; /* Default position to move the section around */
+  width: 100%;
+  height: 15vh;
+  background: #004080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eaf5ff;
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+}
+
+/* Other content below the hero */
+.about-section {
+  max-width: 800px;
+  background-color: #fff;
+  padding: 15px 30px 0px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Resume Section */
+.resume-section {
+  text-align: center;
+  margin: 15px 0 25px 0;
+}
+
+.resume-section a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #004080;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.resume-section a:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .about-section {
+    padding: 20px;
+  }
+
+  .resume-section a {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+}

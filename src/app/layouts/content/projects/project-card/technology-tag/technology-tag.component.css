@@ -1,0 +1,10 @@
+.tech-tag-container {
+  display: inline-block; 
+  margin-right: 5px;
+  margin-top: 5px;
+  padding: 4px 8px; /* Padding inside tags */
+  background-color: #eaf5ff; /* Light background for tags */
+  border-radius: 4px; /* Rounded corners for tags */
+  color: #333; /* Text color for tags */
+  font-size: 0.875rem; /* Slightly smaller font size for tags */
+}

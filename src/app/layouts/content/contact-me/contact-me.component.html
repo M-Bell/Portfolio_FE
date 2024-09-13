@@ -1,0 +1,75 @@
+<div class="content">
+  <h2>Contact Me</h2>
+  <form [formGroup]="sendMessageForm" (ngSubmit)="onSubmit()">
+    <div
+      class="input-group"
+      [class.invalid]="
+        sendMessageForm.get('name')!.touched &&
+        sendMessageForm.get('name')!.invalid
+      "
+    >
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        formControlName="name"
+        name="name"
+        placeholder="Enter your name"
+      />
+      @if( sendMessageForm.get('name')!.touched &&
+      sendMessageForm.get('name')!.invalid){
+      <div class="error">Name is required.</div>
+      }
+    </div>
+
+    <div
+      class="input-group"
+      [class.invalid]="
+        sendMessageForm.get('email')!.touched &&
+        sendMessageForm.get('email')!.invalid
+      "
+    >
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        name="email"
+        placeholder="Enter your email"
+      />
+      @if( sendMessageForm.get('email')!.touched &&
+      sendMessageForm.get('email')!.invalid){
+      <div class="error">
+        @if(sendMessageForm.get('email')!.errors!['required']){
+        <span>Email is required.</span>
+        } @if(sendMessageForm.get('email')!.errors!['email']){
+        <span>Enter a valid email.</span>
+        }
+      </div>
+      }
+    </div>
+
+    <div
+      class="input-group"
+      [class.invalid]="
+        sendMessageForm.get('message')!.touched &&
+        sendMessageForm.get('message')!.invalid
+      "
+    >
+      <label for="message">Message:</label>
+      <textarea
+        id="message"
+        formControlName="message"
+        name="message"
+        rows="4"
+        placeholder="Enter your message"
+      ></textarea>
+      @if(sendMessageForm.get('message')!.touched &&
+      sendMessageForm.get('message')!.invalid){
+      <div class="error">Message is required.</div>
+      }
+    </div>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>

@@ -1,0 +1,19 @@
+/* error-card.component.css */
+.error-card {
+    background-color: #f8d7da; /* Light red background to indicate an error */
+    color: #721c24; /* Dark red text color for contrast */
+    border: 1px solid #f5c6cb; /* Slightly darker border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Space inside the card */
+    max-width: 300px; /* Limit the width of the card */
+    margin: 10% auto; /* Center horizontally with some margin */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+  }
+  
+  .error-message {
+    margin: 0; /* Remove default margin */
+    font-size: 2rem; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text inside */
+  }
+  
