@@ -1,14 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Project } from '../../../../models/project.model';
 import { TechnologyTagComponent } from '../project-card/technology-tag/technology-tag.component';
-import { NgFor, NgIf } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { DataService } from '../../../../services/data.service';
-
+import { MediaCarouselComponent } from './media-carousel/media-carousel.component';
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [TechnologyTagComponent, RouterLink],
+  imports: [TechnologyTagComponent, RouterLink, MediaCarouselComponent],
   templateUrl: './project.component.html',
   styleUrl: './project.component.css',
 })

@@ -9,7 +9,7 @@
 }
 
 /* Styling for the back link */
-.content a {
+.return-link {
   text-decoration: none; /* Remove underline */
   color: #333; /* Blue color for the link */
   font-weight: lighter; /* Make the link bold */
@@ -17,8 +17,8 @@
   display: inline-block; /* Display it as a block-level element */
 }
 
-.content a:hover {
-  font-weight: bold;
+.return-link:hover {
+  text-decoration: 1px underline;
 }
 
 .data-container {
@@ -41,6 +41,9 @@
   border-radius: 8px; /* Rounded corners for the image */
   max-height: 60vh;
 }
+section {
+  margin-bottom: 20px;
+}
 
 /* Styling for the project title */
 h2 {
@@ -54,7 +57,6 @@ p {
   font-size: 1rem; /* Normal font size for the description */
   color: #666; /* Medium grey color for text */
   line-height: 1.6; /* Improved readability with line height */
-  margin-bottom: 20px; /* Space below the description */
 }
 
 /* Section for Technology Stack */
@@ -74,26 +76,15 @@ ul {
   gap: 10px; /* Space between the items */
 }
 
-/* Media URLs styling */
-.media-list li {
-  margin-bottom: 10px; /* Space between the links */
-}
-
-.media-list a {
-  color: #007bff; /* Blue color for links */
-  text-decoration: none; /* Remove underline from links */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.media-list a:hover {
-  color: #0056b3; /* Darker blue on hover */
-}
-
 .tech-container {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border-top: 1px gray solid;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px gray solid;
 }
 
 .tech-stack {
@@ -104,15 +95,23 @@ ul {
   max-width: 60%;
 }
 
-section {
+.link-section {
+  text-align: center;
   margin-bottom: 10px;
 }
 
-.git-link {
-  margin-top: 3vh;
-  text-align: center;
+.link-section a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #004080;
+  color: white;
+  text-decoration: none;
+  width: 35%;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
 }
 
-.git-link a {
-  text-decoration: underline;
+.link-section a:hover {
+  background-color: #7a9abd;
 }

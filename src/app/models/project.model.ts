@@ -5,5 +5,13 @@ export interface Project {
   technologyStack?: string[];
   description?: string;
   gitUrl?: string;
-  mediaId?: number[];
+  accessUrl?: string;
+  media?: MediaData[];
+}
+
+export interface MediaData {
+  type: 'img' | 'video',
+  address: string,
+  name: string,
+  description?: string
 }
