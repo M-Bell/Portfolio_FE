@@ -2,7 +2,7 @@ export interface Project {
   id: number,
   name: string;
   imageSrc?: string;
-  technologyStack?: string[];
+  technologyStack?: TechnologyStackItem[];
   description?: string;
   gitUrl?: string;
   accessUrl?: string;
@@ -10,8 +10,14 @@ export interface Project {
 }
 
 export interface MediaData {
+  id: number,
   type: 'img' | 'video',
   address: string,
   name: string,
   description?: string
+}
+
+export interface TechnologyStackItem{
+  id: number,
+  name: string
 }

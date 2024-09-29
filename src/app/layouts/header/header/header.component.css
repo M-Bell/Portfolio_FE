@@ -55,7 +55,7 @@ nav li.route a {
   color: #eaf5ff;
   font-size: 1rem;
   text-decoration: none;
-  padding: 8px 15px;
+  padding: 6px 15px 9px 15px;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }

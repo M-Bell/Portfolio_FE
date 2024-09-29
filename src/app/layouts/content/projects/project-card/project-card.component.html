@@ -3,7 +3,7 @@
     <span class="project-name">{{ project.name }}</span>
     <div class="tags">
       @for(technology of project.technologyStack; track $index){
-      <app-technology-tag [name]="technology" />
+      <app-technology-tag [name]="technology.name" />
       }
     </div>
   </div>

@@ -16,6 +16,6 @@ export class ProjectsComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.projectList = this.dataService.mockProjects;
+    this.dataService.getAllProjects().subscribe(x => this.projectList=x);
   }
 }

@@ -32,7 +32,7 @@
         <h4>Technology Stack</h4>
         <ul>
           @for(tech of project.technologyStack; track $index){
-          <app-technology-tag [name]="tech" />
+          <app-technology-tag [name]="tech.name" />
           }
         </ul>
       </div>
@@ -60,9 +60,8 @@
       </div>
       }
     </section>
-    @if(project.media && project.media.length > 0){
-    <app-media-carousel [media]="project.media" />
-    } } @else {
+    <app-media-carousel [mediaProjectId]="project.id" />
+    } @else {
     <p>Project missing</p>
     }
   </div>

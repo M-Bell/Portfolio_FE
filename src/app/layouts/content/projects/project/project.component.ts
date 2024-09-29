@@ -22,6 +22,6 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit(): void {
     let id: string | null = this.activatedRoute.snapshot.paramMap.get('id');
-    this.project = this.dataService.mockProjects[parseInt(id ? id : '0')];
+    this.dataService.getProjectById(id).subscribe(data => this.project = data);
   }
 }

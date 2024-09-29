@@ -1,54 +1,57 @@
-<section class="content">
-  <h4>Media</h4>
-
-  <div
-    id="carouselExampleCaptions"
-    class="carousel slide"
-    data-bs-ride="carousel"
-  >
-    <div class="carousel-inner">
-      @for(resource of media; track $index){
-      <div class="carousel-item active" [class.active]="$index == 0">
-
-          <div
-            class="slide-background"
-            style="background-image: url({{resource.address}});"
-          ></div>
-          <img
-            [src]="resource.address"
-            class="d-block w-100"
-            alt="{{ resource.name }}"
-          />
-
-        @if(resource.name || resource.description){
-        <div class="carousel-caption d-none d-md-block caption-custom">
-          @if(resource.name){
-          <h5>{{ resource.name }}</h5>
-          } @if(resource.description){
-          <p>{{ resource.description }}</p>
+@if(mediaData.length!=0){
+  <section class="content">
+    <h4>Media</h4>
+  
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        @for(resource of mediaData; track $index){
+        <div class="carousel-item active" [class.active]="$index == 0">
+  
+            <div
+              class="slide-background"
+              style="background-image: url({{resource.address}});"
+            ></div>
+            <img
+              [src]="resource.address"
+              class="d-block w-100"
+              alt="{{ resource.name }}"
+            />
+  
+          @if(resource.name || resource.description){
+          <div class="carousel-caption d-none d-md-block caption-custom">
+            @if(resource.name){
+            <h5>{{ resource.name }}</h5>
+            } @if(resource.description){
+            <p>{{ resource.description }}</p>
+            }
+          </div>
           }
         </div>
         }
       </div>
-      }
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#carouselExampleCaptions"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#carouselExampleCaptions"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</section>
+  </section>
+  
+}

@@ -1,83 +1,29 @@
 import { Injectable } from '@angular/core';
-import { Project } from '../models/project.model';
+import { MediaData, Project } from '../models/project.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  mockProjects: Project[] = [
-    {
-      id: 0,
-      name: 'Portfolio Website',
-      technologyStack: [
-        'Angular',
-        'TypeScript',
-        'Java',
-        'Spring Boot',
-        'CSS',
-        'HTML',
-      ],
-      description:
-        'A personal portfolio website to showcase my projects, skills, and experience. The website is built using pure Angular for the frontend and Java/Spring Boot backend API integration. It features a responsive design, dynamic project data, and smooth navigation.',
-      gitUrl: 'https://github.com/username/portfolio-website',
-      accessUrl: 'http://localhost:4200/',
-      media: [
-        {
-          type: 'img',
-          address: 'assets/images/image.png',
-          name: 'Tree',
-          description: 'Just a random tree'
-        },
-        {
-          type: 'img',
-          address: 'assets/images/portfolio.png',
-          name: 'Portfolio main page',
-        }
-      ]
-    },
-    {
-      id: 1,
-      name: 'E-Commerce Storefront',
-      technologyStack: ['React', 'Node.js', 'Express', 'MongoDB'],
-      description:
-        'A full-stack e-commerce platform with a shopping cart, product search, and secure checkout features.',
-    },
-    {
-      id: 2,
-      name: 'Real-Time Chat Application',
-      technologyStack: ['Angular', 'Firebase', 'RxJS', 'SCSS'],
-      description:
-        'A real-time messaging application using Firebase for authentication and real-time database.',
-    },
-    {
-      id: 3,
-      name: 'Task Management App',
-      technologyStack: ['Vue.js', 'JavaScript', 'Bootstrap', 'Firebase'],
-      description:
-        'A task management tool that allows users to organize tasks, set deadlines, and collaborate with teams.',
-    },
-    {
-      id: 4,
-      name: 'Weather Dashboard',
-      technologyStack: ['React', 'OpenWeather API', 'JavaScript', 'CSS'],
-      description:
-        'A dashboard that fetches real-time weather data from the OpenWeather API, showing forecasts and current conditions for selected cities.',
-    },
-    {
-      id: 5,
-      name: 'Blog Platform',
-      technologyStack: ['Next.js', 'GraphQL', 'Tailwind CSS'],
-      description:
-        'A modern blog platform that supports markdown content creation and dynamic routing using Next.js and GraphQL.',
-    },
-    {
-      id: 6,
-      name: 'Fitness Tracker',
-      technologyStack: ['React Native', 'Redux', 'Node.js', 'MongoDB'],
-      description:
-        'A mobile application that tracks users’ fitness activities and provides personalized workout recommendations.',
-    },
-  ];
+  private BASE_URL: string = 'http://localhost:8080/api/portfolio/projects';
 
-  constructor() {}
+  constructor(private httpClient: HttpClient) {}
+
+  public getAllProjects(): Observable<Project[]> {
+    return this.httpClient.get<Project[]>(this.BASE_URL);
+  }
+
+  getProjectById(id: string | null): Observable<Project> {
+    return this.httpClient.get<Project>(`${this.BASE_URL}/${id}`);
+  }
+
+  getMediaByProjectId(mediaProjectId: number): Observable<MediaData[]> {
+    console.log(`${this.BASE_URL}/media/${mediaProjectId}`);
+    
+    return this.httpClient.get<MediaData[]>(
+      `${this.BASE_URL}/media/${mediaProjectId}`
+    );
+  }
 }
