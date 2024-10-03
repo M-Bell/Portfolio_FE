@@ -1,6 +1,0 @@
-{
-    "/api/*": {
-        "target": "https://docker-portfolio-repo-latest.onrender.com",
-        "secure": false
-    }
-}
