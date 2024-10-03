@@ -20,8 +20,6 @@ export class MediaCarouselComponent implements OnInit {
   ngOnInit(): void {
     this.dataService
       .getMediaByProjectId(this.mediaProjectId)
-      .subscribe((data) => (this.mediaData = data));
-      console.log(this.mediaData);
-      
+      .subscribe((data) => (this.mediaData = data));      
   }
 }

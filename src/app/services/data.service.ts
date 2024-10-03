@@ -20,8 +20,6 @@ export class DataService {
   }
 
   getMediaByProjectId(mediaProjectId: number): Observable<MediaData[]> {
-    console.log(`${this.BASE_URL}/media/${mediaProjectId}`);
-
     return this.httpClient.get<MediaData[]>(
       `${this.BASE_URL}/media/${mediaProjectId}`
     );
