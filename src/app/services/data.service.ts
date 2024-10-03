@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DataService {
-  private BASE_URL: string = 'http://localhost:8080/api/portfolio/projects';
+  private BASE_URL: string = 'https://docker-portfolio-repo-latest.onrender.com/api/portfolio/projects';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -21,7 +21,7 @@ export class DataService {
 
   getMediaByProjectId(mediaProjectId: number): Observable<MediaData[]> {
     console.log(`${this.BASE_URL}/media/${mediaProjectId}`);
-    
+
     return this.httpClient.get<MediaData[]>(
       `${this.BASE_URL}/media/${mediaProjectId}`
     );
