@@ -1,5 +1,8 @@
 <div class="content">
   <a class="return-link" routerLink="../">← Back</a>
+  @if(loading){
+    <app-loading/>
+  } @else{
   <div>
     @if(project){
 
@@ -65,4 +68,5 @@
     <p>Project missing</p>
     }
   </div>
+  }
 </div>

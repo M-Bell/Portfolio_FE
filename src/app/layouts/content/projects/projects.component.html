@@ -1,12 +1,16 @@
+@if(loading){
+<app-loading />
+} @else {
 <div class="content">
   <section id="projects" class="projects-section">
     <h2>My Projects</h2>
     <ul>
-      @for(project of projectList; track project.id) { 
-        @if(project.accessUrl || project.gitUrl) {
-          <li><app-project-card [project]="project" /></li>
-        } 
-      }
+      @for(project of projectList; track project.id) { @if(project.accessUrl ||
+      project.gitUrl) {
+      <li><app-project-card [project]="project" /></li>
+      } }
     </ul>
   </section>
 </div>
+
+}
