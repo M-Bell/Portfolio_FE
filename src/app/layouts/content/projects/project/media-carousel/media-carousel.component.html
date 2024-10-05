@@ -21,13 +21,11 @@
           alt="{{ resource.name }}"
         />
         } @else {
-          <video class="d-block w-100" controls>
-            <source [src]="resource.address" type="video/mp4">
+        <video class="d-block w-100" controls>
+          <source [src]="resource.address" type="video/mp4" />
           Your browser does not support the video tag.
-          </video>
-        }
-        
-        @if(resource.name || resource.description){
+        </video>
+        } @if(resource.name || resource.description){
         <div class="carousel-caption d-none d-md-block caption-custom">
           @if(resource.name){
           <h5>{{ resource.name }}</h5>
@@ -42,6 +40,7 @@
     <button
       class="carousel-control-prev"
       type="button"
+      (click)="checkActiveVideo()"
       data-bs-target="#carouselExampleCaptions"
       data-bs-slide="prev"
     >
@@ -51,6 +50,7 @@
     <button
       class="carousel-control-next"
       type="button"
+      (click)="checkActiveVideo()"
       data-bs-target="#carouselExampleCaptions"
       data-bs-slide="next"
     >

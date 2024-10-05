@@ -20,6 +20,28 @@ export class MediaCarouselComponent implements OnInit {
   ngOnInit(): void {
     this.dataService
       .getMediaByProjectId(this.mediaProjectId)
-      .subscribe((data) => (this.mediaData = data));      
+      .subscribe((data) => (this.mediaData = data));
+  }
+
+  checkActiveVideo() {
+    // Select the carousel by its ID
+    const carousel: HTMLElement | null = document.getElementById(
+      'carouselExampleCaptions'
+    );
+
+    if (!carousel) {
+      console.error(
+        `Carousel with ID "${'carouselExampleCaptions'}" not found.`
+      );
+      return;
+    }
+
+    const videos: NodeListOf<HTMLVideoElement> =
+      document.querySelectorAll('video');
+
+    videos.forEach((video: HTMLVideoElement) => {
+      video.pause();
+      video.currentTime = 0;
+    });
   }
 }
