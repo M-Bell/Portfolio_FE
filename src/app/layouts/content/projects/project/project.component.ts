@@ -34,8 +34,8 @@ export class ProjectComponent implements OnInit {
       .getProjectById(id)
       .subscribe({
         next: data => this.project = data,
-        error: () => this.loading = true,
-        complete: () => this.loading = true,
+        error: () => this.loading = false,
+        complete: () => this.loading = false,
       });
   }
 }
