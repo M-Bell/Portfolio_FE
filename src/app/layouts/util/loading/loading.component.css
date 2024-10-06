@@ -10,8 +10,7 @@
 }
 
 .loading-message{
-  font-size: 20px;
-  font-family: "Arial", sans-serif;
+  font-size: 1.4rem;
   margin-top: 2%;
 }
 
@@ -19,3 +18,8 @@
   --mdc-circular-progress-active-indicator-color: #004080;
 }
 
+@media (max-width: 783px){
+  .loading-message{
+    font-size: 1rem;
+  }
+}
