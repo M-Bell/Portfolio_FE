@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DataService {
-  private BASE_URL: string = 'https://docker-portfolio-repo-latest.onrender.com/api/portfolio/projects';
+  private BASE_URL: string = process.env['BACKEND_URL'] || '';
 
   constructor(private httpClient: HttpClient) {}
 
