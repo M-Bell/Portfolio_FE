@@ -86,6 +86,11 @@ button[type="submit"] {
     font-size: 1rem;
     padding: 10px;
   }
+
+  .content h2 {
+    font-size: 1.4rem;
+  }
+  
 }
 
 .error {
