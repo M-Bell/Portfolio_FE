@@ -44,7 +44,6 @@ footer li.link a:hover {
   }
 
   footer ul.social-links {
-    flex-direction: column; /* Stack the social links vertically */
     gap: 10px; /* Reduce space between links */
   }
 

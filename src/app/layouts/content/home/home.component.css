@@ -23,7 +23,7 @@
 
 /* Other content below the hero */
 .about-section {
-  max-width: 800px;
+  max-width: 100vh;
   background-color: #fff;
   padding: 15px 30px 0px 30px;
   border-radius: 8px;
@@ -53,7 +53,7 @@
 /* Resume Section */
 .resume-section {
   text-align: center;
-  margin: 15px 0 25px 0;
+  margin: 10px 0 15px 0;
 }
 
 .resume-section a {
@@ -71,6 +71,16 @@
   background-color: #7a9abd;
 }
 
+@media (max-width: 1500px) {
+  .about-section {
+    max-width: 60vh;
+  }
+
+  .about-section p {
+    font-size: 1.5rem;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-content h1 {
@@ -82,12 +92,16 @@
   }
 
   .about-section {
-    padding: 20px;
+    max-width: 40vh;
+    margin-bottom: 20px;
+  }
+
+  .description-paragraph {
+    font-size: 0.9rem;
   }
 
   .resume-section a {
     font-size: 1rem;
-    padding: 8px 16px;
   }
 }
 
