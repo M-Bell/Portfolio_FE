@@ -55,8 +55,8 @@ h4 {
 
 .carousel-control-prev,
 .carousel-control-next {
-  height: 16%;
-  width: 8%;
+  height: 8vh;
+  width: 8vh;
   align-self: center;
   background-color: rgba(51, 51, 51, 0.25);
   opacity: 1;
@@ -95,3 +95,13 @@ h4 {
 .caption-custom h5 {
   color: #333;
 }
+
+
+@media (max-width: 760px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    height: 6vh;
+    width: 6vh;
+  }
+}
+

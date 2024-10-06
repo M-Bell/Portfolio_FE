@@ -1,9 +1,9 @@
 /* Container for the content */
 .content {
-  max-width: 800px; /* Limit the width of the content */
-  margin: 40px auto; /* Center the content horizontally */
-  padding: 20px; /* Padding around the content */
-  background-color: #fff; /* White background */
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -114,4 +114,23 @@ ul {
 
 .link-section a:hover {
   background-color: #7a9abd;
+}
+
+@media (max-width: 1200px) {
+  .link-section a {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+  .link-section a {
+    font-size: 0.9rem;
+  }
 }
