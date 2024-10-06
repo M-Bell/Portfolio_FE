@@ -69,6 +69,14 @@ button[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
+
+.error {
+  color: #b30202;
+  font-size: 12px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
   .content {
@@ -91,11 +99,4 @@ button[type="submit"] {
     font-size: 1.4rem;
   }
   
-}
-
-.error {
-  color: #b30202;
-  font-size: 12px;
-  margin-left: 5px;
-  margin-top: 5px;
 }
