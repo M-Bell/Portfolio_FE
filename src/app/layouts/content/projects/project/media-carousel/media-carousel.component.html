@@ -9,7 +9,7 @@
   >
     <div class="carousel-inner">
       @for(resource of mediaData; track $index){
-      <div class="carousel-item active" [class.active]="$index == 0">
+      <div class="carousel-item" [class.active]="$index == 0">
         @if(resource.type=='img'){
         <div
           class="slide-background"
