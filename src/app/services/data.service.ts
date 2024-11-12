@@ -189,4 +189,11 @@ export class DataService {
     );
     return of(project!);
   }
+
+  getMediaByProjectId(mediaProjectId: number) : Observable<MediaData[]> {
+    const project = this.projects.find(
+      (project) => project.id === mediaProjectId
+    );
+    return of(project!.media!);
+  }
 }
