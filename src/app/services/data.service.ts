@@ -40,7 +40,22 @@ export class DataService {
         { id: 1, name: 'Java' },
         { id: 2, name: 'Git' },
       ],
-      media: [],
+      media: [{
+        id: 6,
+        type: 'video',
+        address:
+          'https://res.cloudinary.com/dg9jxlzdz/video/upload/v1727644563/Tanks_promo_atsyqv.mp4',
+        name: '',
+        description: undefined,
+      },
+      {
+        id: 7,
+        type: 'video',
+        address:
+          'https://res.cloudinary.com/dg9jxlzdz/video/upload/v1727644550/Tanks_playthrough_gvboyr.mp4',
+        name: '',
+        description: undefined,
+      },],
     },
     {
       id: 4,
@@ -149,22 +164,6 @@ export class DataService {
           address:
             'https://res.cloudinary.com/dg9jxlzdz/image/upload/v1727644566/Architecture_eng_v5gnnp.png',
           name: 'App architecture',
-          description: undefined,
-        },
-        {
-          id: 6,
-          type: 'video',
-          address:
-            'https://res.cloudinary.com/dg9jxlzdz/video/upload/v1727644563/Tanks_promo_atsyqv.mp4',
-          name: '',
-          description: undefined,
-        },
-        {
-          id: 7,
-          type: 'video',
-          address:
-            'https://res.cloudinary.com/dg9jxlzdz/video/upload/v1727644550/Tanks_playthrough_gvboyr.mp4',
-          name: '',
           description: undefined,
         },
         {
