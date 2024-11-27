@@ -83,7 +83,7 @@ export class DataService {
       gitUrl: 'https://github.com/M-Bell/Coursework',
       accessUrl: undefined,
       technologyStack: [
-        { id: 10, name: 'Angular' },
+        { id: 10, name: 'Thymeleaf' },
         { id: 11, name: 'TypeScript' },
         { id: 12, name: 'Spring Boot' },
         { id: 13, name: 'PostgreSQL' },
@@ -176,6 +176,24 @@ export class DataService {
         },
       ],
     },
+    {
+      id: 7,
+      name: "BidNest",
+      description: 
+        "BidNest is an auction website currently under development, designed to provide a seamless platform for creating and managing online auctions. Users will be able to list items for bidding, browse active auctions, and evaluate buyer reliability through a detailed rating system. The platform aims to deliver a secure and user-friendly experience, featuring an intuitive interface built using Angular and styled with HTML and CSS. A robust backend powered by Spring Boot and PostgreSQL ensures efficient functionality and data management. The project focuses on modern tools and best practices to create a versatile and efficient auction platform.",
+      gitUrl: 'https://github.com/auction-app-personal/AuctionClient',
+      accessUrl: undefined,
+      technologyStack: [
+        { id: 0, name: "Java" },
+        { id: 1, name: "Spring Boot" },
+        { id: 2, name: "Angular" },
+        { id: 3, name: "PostgreSQL" },
+        { id: 4, name: "HTML" },
+        { id: 5, name: "CSS" },
+        { id: 6, name: "TypeScript" }
+      ],
+      media: []
+    }
   ];
 
   public getAllProjects(): Observable<Project[]> {
